@@ -1,8 +1,17 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Names: Jessica Lu, Peyton Walters, Kevin Duong
+ * Block 7
+ *
+ * PurpAm Method: This method scans in a designated file which containts
+ * the coordinates of the area. It uses those points and draws in onto a 
+ * dynamically sized jFrame. It also colors in the area of a map
+ *
+ * Hashmap Method: This method is used to create a colored version of the desired 
+ * area. Using hashmaps and a designated file, the program reads in the color
+ * values in the file and uses the formulas given to create an RGB color
+ * representation onto the jFrame, thus showing the political heat of an area.
  */
+
 package map;
 
 import edu.princeton.cs.introcs.*;
@@ -16,6 +25,14 @@ import java.util.*;
  */
 public class PurpAm {
 
+    /**
+     * Uses a read in file to scale a jFrame and plot the given coordinates
+     * onto the screen to display an image of the desired area
+     * 
+     * @param place
+     * @param date
+     * @throws Exception
+     */
     public PurpAm(String place, int date) throws Exception {
         Draw d = new Draw("Purple America");
         File f = new File("src\\data\\" + place + ".txt");
